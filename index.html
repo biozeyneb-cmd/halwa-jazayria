@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>اسم مشروعك | حلويات جزائرية تقليدية</title>
+  <meta name="description" content="حلويات جزائرية تقليدية: المقروط، البقلاوة، قلب اللوز، حلوة الطابع، كعك النقاش، وتحضير حلويات الأعراس والخطوبة والختان.">
+
+  <!-- ستايل الشات -->
+  <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet">
+
+  <style>
+    :root{
+      --brown:#5b3a29;
+      --gold:#c8963e;
+      --cream:#fbf6ee;
+      --sand:#f1e4cf;
+      --text:#3a2a20;
+      --white:#fff;
+
+      /* ألوان الشات */
+      --chat--color-primary:#c8963e;
+      --chat--color-primary-shade-50:#b5842f;
+      --chat--color-primary-shade-100:#a07324;
+      --chat--header--background:#5b3a29;
+      --chat--header--color:#fff;
+      --chat--toggle--background:#c8963e;
+      --chat--toggle--hover--background:#b5842f;
+      --chat--toggle--active--background:#a07324;
+      --chat--toggle--color:#fff;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{
+      font-family:"Segoe UI",Tahoma,"Noto Naskh Arabic",Arial,sans-serif;
+      background:var(--cream);
+      color:var(--text);
+      line-height:1.8;
+    }
+    a{text-decoration:none;color:inherit}
+    .container{width:min(1100px,92%);margin-inline:auto}
+
+    /* الشريط العلوي */
+    header{
+      position:sticky;top:0;z-index:50;
+      background:rgba(251,246,238,.95);
+      backdrop-filter:blur(8px);
+      border-bottom:1px solid var(--sand);
+    }
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    .logo{font-weight:800;font-size:1.25rem;color:var(--brown)}
+    .logo span{color:var(--gold)}
+    nav a{margin-inline-start:18px;font-weight:600;color:var(--brown);font-size:.95rem}
+    nav a:hover{color:var(--gold)}
+
+    /* الترحيب */
+    .hero{
+      background:
+        linear-gradient(rgba(91,58,41,.82),rgba(91,58,41,.82)),
+        repeating-linear-gradient(45deg,#6b4632 0 12px,#5b3a29 12px 24px);
+      color:var(--white);
+      text-align:center;
+      padding:90px 0 80px;
+    }
+    .hero h1{font-size:clamp(1.9rem,6vw,3.2rem);line-height:1.4;margin-bottom:14px}
+    .hero h1 span{color:var(--gold)}
+    .hero p{max-width:620px;margin:0 auto 28px;font-size:1.05rem;opacity:.95}
+    .btn{
+      display:inline-block;padding:13px 30px;border-radius:50px;
+      font-weight:700;transition:.25s;border:2px solid var(--gold);
+    }
+    .btn-primary{background:var(--gold);color:var(--white)}
+    .btn-primary:hover{background:transparent;color:var(--gold)}
+    .btn-outline{color:var(--white);margin-inline-start:10px}
+    .btn-outline:hover{background:var(--gold)}
+
+    /* الأقسام */
+    section{padding:70px 0}
+    .title{text-align:center;margin-bottom:40px}
+    .title h2{font-size:clamp(1.5rem,4vw,2.1rem);color:var(--brown)}
+    .title .line{width:70px;height:4px;background:var(--gold);border-radius:4px;margin:10px auto 0}
+    .title p{margin-top:10px;color:#7a6354}
+
+    /* الخدمات */
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+    .card{
+      background:var(--white);
+      border-radius:18px;
+      padding:26px 22px;
+      text-align:center;
+      box-shadow:0 6px 20px rgba(91,58,41,.08);
+      transition:.25s;
+      border:1px solid var(--sand);
+    }
+    .card:hover{transform:translateY(-5px);box-shadow:0 12px 28px rgba(91,58,41,.14)}
+    .card .icon{font-size:2.4rem;margin-bottom:8px}
+    .card h3{color:var(--brown);margin-bottom:6px;font-size:1.15rem}
+    .card p{font-size:.95rem;color:#7a6354}
+
+    .events{background:var(--sand)}
+    .events .card{background:var(--cream)}
+
+    /* تواصل */
+    .contact-box{
+      background:var(--brown);color:var(--white);
+      border-radius:22px;padding:40px 24px;text-align:center;
+    }
+    .contact-box h2{margin-bottom:8px}
+    .contact-box p{opacity:.9;margin-bottom:24px}
+    .contact-list{display:flex;flex-wrap:wrap;gap:14px;justify-content:center}
+    .contact-item{
+      background:rgba(255,255,255,.1);
+      padding:12px 22px;border-radius:50px;font-weight:600;
+      border:1px solid rgba(255,255,255,.2);
+    }
+    .contact-item:hover{background:var(--gold)}
+
+    footer{text-align:center;padding:22px 0;color:#7a6354;font-size:.9rem}
+
+    @media(max-width:600px){
+      nav a{margin-inline-start:10px;font-size:.85rem}
+      .btn-outline{margin:12px 0 0}
+      .hero{padding:70px 0 60px}
+      section{padding:50px 0}
+    }
+
+    /* الشات: اتجاه عربي */
+    .chat-window-wrapper,.chat-window{direction:rtl}
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container nav">
+      <a href="#home" class="logo">اسم <span>مشروعك</span></a>
+      <nav>
+        <a href="#home">الرئيسية</a>
+        <a href="#services">خدماتنا</a>
+        <a href="#contact">تواصل معنا</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- قسم الترحيب -->
+  <section class="hero" id="home">
+    <div class="container">
+      <h1>أصالة الحلويات <span>الجزائرية</span><br>بطعم البيت</h1>
+      <p>نحضّر لك أشهى الحلويات الجزائرية التقليدية بمكوّنات طبيعية وبنفس الطريقة التي تعلّمناها من جداتنا، لمائدتك اليومية ولأفراحك ومناسباتك.</p>
+      <a href="#services" class="btn btn-primary">اكتشف خدماتنا</a>
+      <a href="#contact" class="btn btn-outline">اطلب الآن</a>
+    </div>
+  </section>
+
+  <!-- قسم الخدمات -->
+  <section id="services">
+    <div class="container">
+      <div class="title">
+        <h2>حلوياتنا</h2>
+        <div class="line"></div>
+        <p>مختارات من أشهر الحلويات الجزائرية التقليدية</p>
+      </div>
+      <div class="grid">
+        <div class="card"><div class="icon">🍯</div><h3>المقروط</h3><p>بالتمر واللوز، مقلي أو مشوي، ومغمور بالعسل.</p></div>
+        <div class="card"><div class="icon">🥮</div><h3>البقلاوة الجزائرية</h3><p>رقائق هشّة محشوة باللوز ومسقية بالعسل.</p></div>
+        <div class="card"><div class="icon">🌰</div><h3>قلب اللوز</h3><p>حلوى ناعمة من اللوز المطحون بنكهة ماء الزهر.</p></div>
+        <div class="card"><div class="icon">🍪</div><h3>حلوة الطابع</h3><p>حلوى الطابع المزخرفة الغنية بالفرينة واللوز.</p></div>
+        <div class="card"><div class="icon">🍘</div><h3>كعك النقاش</h3><p>كعك مزيّن بنقوش جميلة، ناعم وطيب المذاق.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- المناسبات -->
+  <section class="events">
+    <div class="container">
+      <div class="title">
+        <h2>حلويات المناسبات</h2>
+        <div class="line"></div>
+        <p>نهتم بكل التفاصيل لتكون مناسبتك مميزة</p>
+      </div>
+      <div class="grid">
+        <div class="card"><div class="icon">💍</div><h3>حلويات الزفاف</h3><p>تحضير تشكيلة متنوعة وتقديم أنيق يليق بعرسك.</p></div>
+        <div class="card"><div class="icon">🎀</div><h3>حلويات الخطوبة</h3><p>تجهيز الحلويات وتغليفها بشكل جميل لفرحة الخطوبة.</p></div>
+        <div class="card"><div class="icon">🎉</div><h3>حلويات الختان</h3><p>إعداد حلويات تقليدية لهذه المناسبة العزيزة.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- تواصل معنا -->
+  <section id="contact">
+    <div class="container">
+      <div class="contact-box">
+        <h2>تواصل معنا</h2>
+        <p>اطلب حلوياتك أو احجز مناسبتك، ويسعدنا خدمتك.</p>
+        <div class="contact-list">
+          <a class="contact-item" href="tel:+213000000000">📞 0000 00 00 00</a>
+          <a class="contact-item" href="https://wa.me/213000000000" target="_blank" rel="noopener">💬 واتساب</a>
+          <a class="contact-item" href="mailto:example@email.com">✉️ example@email.com</a>
+          <span class="contact-item">📍 المدينة، الجزائر</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>© 2026 اسم مشروعك — جميع الحقوق محفوظة</footer>
+
+  <!-- فقاعة الشات -->
+  <script type="module">
+    import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+
+    createChat({
+      webhookUrl: 'https://abuhadi1.app.n8n.cloud/webhook/e50cbf89-8f4e-4183-ae5e-ffd6e0f8ae8e/chat',
+      initialMessages: [
+        'أهلاً وسهلاً 👋',
+        'كيف أقدر أساعدك اليوم؟'
+      ],
+      i18n: {
+        en: {
+          title: 'أهلاً بك 👋',
+          subtitle: 'اسألني أي شي',
+          footer: '',
+          getStarted: 'محادثة جديدة',
+          inputPlaceholder: 'اكتب رسالتك…',
+        },
+      },
+    });
+  </script>
+</body>
+</html>
